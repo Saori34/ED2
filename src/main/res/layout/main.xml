@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+    >
+    <!-- Dans ce layout vertical, on commence par placer un objet graphique de type
+         EditText. Il s'agit d'un champ de texte éditable par l'utilisateur. Pour ce
+         faire on utilise une balise dont le nom est la classe correspondante. Les
+         deux premier attributs sont de attributs de placement, c'est à dire des
+         réglages appliqués non pas à l'objet lui même mais au Layout le contenant.
+         Ce champ de texte cherche à occuper tout l'espace horizontal (fill_parent)
+         et occupe uniquement la zone qu'il lui ait nécessaire pour son affichage
+         correct en hauteur (wrap_content). La valeur initiale portée par le champ
+         de texte est stockée dans une chaîne de caractères nommée LaunchedMessage
+         et définie dans le fichier ressource : res/values/strings.xml.
+         On définit également un identifiant de cet objet pour pouvoir retrouver une
+         référence sur cet objet dans du code java, grace à la méthode
+         findViewById(). L'identifiant activity_ed2_msg_te sera accessible grace à la classe
+         R automatiquement génerée par le processus de compilation : R.id.main_msg_te
+         -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LaunchedMessage"
+        android:id="@+id/main_msg_te"
+        />
+    <!-- L'élément suivant est un bouton qui n'occupe dans son containeur que
+         l'espace minimum nécessaire à son affichage correct (wrap_content dans les
+         2 directions). Les text du bouton est donnée par la ressource string dont
+         le nom est send_btn.
+         Dans cet exemple, aucune interaction n'est programmée sur le bouton.
+         -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_btn"
+        />
+</LinearLayout>
